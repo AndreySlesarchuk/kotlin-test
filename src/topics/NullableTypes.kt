@@ -1,0 +1,26 @@
+package topics
+
+/**
+ *  @author Andrey Slesarchuk
+ *  @date 2022-05-03
+ */
+
+fun main() {
+    val a: String = "Hello"
+    //a = null // NPE excluded
+    println(a)
+
+    var b: String? = "Test"
+    b = null
+
+    // safe call
+    //  Elvis
+    val l = b?.length ?: 111
+    println("l is $l")
+
+    b = if ((0..10).random() > 5) "asdf" else null
+    // !! - throws out NPE if the variable is null
+    val t = b!!.length
+    println("t is $t")
+
+}
