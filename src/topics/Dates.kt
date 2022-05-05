@@ -3,6 +3,7 @@ package topics
 import java.time.*
 import java.util.*
 
+
 /**
  *  @author Andrey Slesarchuk
  *  @date 2022-05-05
@@ -28,10 +29,14 @@ fun main() {
     val startOfDay3 = localDate3.toLocalDate().atTime(LocalTime.MIN)
     val endOfDate3 = localDate3.toLocalDate().atTime(LocalTime.MAX)
 
+    val localDateTime1 = LocalDateTime.of(2008, Month.OCTOBER, 10, 23, 10, 0)
+
+
     println(" localDate1 is $localDate1 day1Start: $startOfDay1 day1End: $endOfDate1")
     println(" localDate2 is $localDate2 day2Start: $startOfDay2")
     println(" localDate3 is $localDate3 day3Start: $startOfDay3 day3End: $endOfDate3")
     println(" localDate4 is $localDate4 localDate5 is: $localDate5")
+    println(" localDateTime1 is $localDateTime1")
 
     iterateBetweenDates(localDate2, localDate2.plusDays(5))
 
