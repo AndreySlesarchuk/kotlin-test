@@ -29,9 +29,17 @@ fun main() {
     println("positive is: ${positive.sorted()}") // [1, 2, 3]
     println("negative is: ${negative.sortedDescending()}") // [-4, -5, -11]
 
-    // group by
+    // group by length
     val result = listOf("a", "b", "kotlin", "ba", "ccc", "ad").groupBy { it.length } // HashMap or LinkedHashMap
     println(result) // {1=[a, b], 6=[kotlin], 2=[ba, ad], 3=[ccc]}
     val longWordSize = result.maxOf { it.key }
     println(result.getValue(longWordSize)) // [kotlin]
+
+    // group by value
+    val longString = "Java has 51 keywords in total. Null, true, and false might seem like keywords but they are not in Java"
+    val wordGroups = longString.split(" ").groupBy { it } // HashMap or LinkedHashMap
+    println(wordGroups) // {1=[a, b], 6=[kotlin], 2=[ba, ad], 3=[ccc]}
+    val frequentlyWordCount = wordGroups.maxOf { it.key }
+    println(frequentlyWordCount) // [kotlin]
+
 }
