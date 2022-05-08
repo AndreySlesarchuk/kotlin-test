@@ -27,7 +27,6 @@ fun groupWords(words: Array<String>): List<List<String>> {
             map[sortedWord] = mutableListOf(word)
     }
 
-
     for (entity in map) {
         result.add(entity.value)
     }
