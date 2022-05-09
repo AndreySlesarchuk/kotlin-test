@@ -36,10 +36,18 @@ fun main() {
     println(result.getValue(longWordSize)) // [kotlin]
 
     // group by value
-    val longString = "Java has 51 keywords in total. Null, true, and false might seem like keywords but they are not in Java"
-    val wordGroups = longString.split(" ").groupBy { it } // HashMap or LinkedHashMap
-    println(wordGroups) // {1=[a, b], 6=[kotlin], 2=[ba, ad], 3=[ccc]}
-    val frequentlyWordCount = wordGroups.maxOf { it.key }
-    println(frequentlyWordCount) // [kotlin]
+    val longString =
+        "Java has 51 keywords in total. Null, true, and false might seem like keywords but they are not in Java. Java and Kotlin are good languages"
+    val wordGroups = longString.split(" ", ".").groupBy { it }
+    val wordMap = mutableMapOf<String, Int>()
+    wordGroups.map { w -> wordMap.put(w.key, w.value.size) }
+    println("wordGroups is: $wordGroups") // {1=[a, b], 6=[kotlin], 2=[ba, ad], 3=[ccc]}
+    val frequentlyWordCount = wordGroups.maxOf { it.value.size }
+    println("Max word common count: $frequentlyWordCount")
+    println("And this first word is: ${wordMap.maxByOrNull { it.value }?.key}")
+
+    val testMap = mutableMapOf<String, Int>()
+    longString.split(" ", ".").groupBy { it }.map { w -> testMap.put(w.key, w.value.size) }
+    println("Test word is: ${testMap.maxByOrNull { it.value }?.key}")
 
 }
