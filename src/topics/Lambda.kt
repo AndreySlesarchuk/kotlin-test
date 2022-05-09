@@ -50,4 +50,9 @@ fun main() {
     longString.split(" ", ".").groupBy { it }.map { w -> testMap.put(w.key, w.value.size) }
     println("Test word is: ${testMap.maxByOrNull { it.value }?.key}")
 
+    val words = longString.split("\\W+|\\s+".toRegex())
+    val wordToCount = words.groupingBy { it }.eachCount()
+    val resultWord = wordToCount.maxByOrNull { it.value }?.key
+    println("Test word2 is: ${resultWord}")
+
 }

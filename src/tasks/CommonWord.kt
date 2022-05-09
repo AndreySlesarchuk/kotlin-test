@@ -1,5 +1,7 @@
 package tasks
 
+import java.util.*
+
 /**
  *  @author Andrey Slesarchuk
  *  @date 2022-05-09
@@ -16,7 +18,12 @@ fun main() {
 }
 
 fun getFrequentWord(text: String): String? {
-    val testMap = mutableMapOf<String, Int>()
-    text.split(" ", ".").groupBy { it }.map { w -> testMap.put(w.key, w.value.size) }
-    return testMap.maxByOrNull { it.value }?.key
+    val result = text
+        .lowercase(Locale.getDefault())
+        .split("\\W+|\\s+".toRegex())
+        .groupingBy { it }
+        .eachCount()
+        .maxByOrNull { it.value }
+        ?.key
+    return result
 }
