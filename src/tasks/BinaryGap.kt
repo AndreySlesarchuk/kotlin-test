@@ -12,14 +12,14 @@ fun main() {
     // input: 20 -> 10100 -> result: 1
     // input: 15 -> 1111 -> result: 0
 
-    println(Solution(529))
+    println(Solution(20))
 }
 
 fun Solution(n: Int): Int {
     if (n == 0) return 0
     val binaryString = Integer.toBinaryString(n)
     var zeroSequences: List<String> = binaryString.split("1")
-    if (binaryString.get(binaryString.length - 1) == '0')
+    if (binaryString.get(binaryString.length - 1) != '1')
         zeroSequences = zeroSequences.dropLast(1)
     val result: Int = zeroSequences.groupBy { it.length }.maxOf { it.key }
     return result
