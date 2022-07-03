@@ -2,7 +2,7 @@ package topics.classes
 
 /**
  *  @author Andrey Slesarchuk
- *  @date 2022-06-03
+ *  @date 2022-07-03
  *
  *  class User getters and setters
  */
