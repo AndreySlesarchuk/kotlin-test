@@ -50,5 +50,12 @@ fun main() {
     println("Country Name: ${country.name}") // Country name
     println("Country Population: ${country.population}") // Country population
 
+    // Book
+    val book = Book("One Hundred Years of Solitude")
+    println("Book Name: ${book.name}") // Country name
+    println("Book Name: ${book.name}  Year: ${book.year}  Price: ${book.price} ")
+    book.year = 1967
+    book.price = 25
+    println("Book Name: ${book.name}  Year: ${book.year}  Price: ${book.price} ")
 
 }
