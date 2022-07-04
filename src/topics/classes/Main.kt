@@ -45,4 +45,10 @@ fun main() {
     dog.weight = -5.5F
     println("Dog Name: ${dog.name} Age: ${dog.age} Weight: ${dog.weight} ") // Dog Name: Ace Age: 7 Weight: 5.5
 
+    // Country
+    val country = Country("Belarus", 9255524)
+    println("Country Name: ${country.name}") // Country name
+    println("Country Population: ${country.population}") // Country population
+
+
 }
