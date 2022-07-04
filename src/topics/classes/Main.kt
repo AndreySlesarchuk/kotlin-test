@@ -52,7 +52,7 @@ fun main() {
 
     // Book
     val book = Book("One Hundred Years of Solitude")
-    println("Book Name: ${book.name}") // Country name
+    println("Book Name: ${book.name}")
     println("Book Name: ${book.name}  Year: ${book.year}  Price: ${book.price} ")
     book.year = 1967
     book.price = 25
