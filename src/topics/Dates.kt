@@ -15,7 +15,7 @@ fun main() {
     val localDate2 = LocalDate.parse("2002-10-13")
 
     // from Date
-    val date = Date()
+    val date = Date(1642302800000L)
     val localDate3: LocalDateTime = date.toInstant().atZone(ZoneId.systemDefault()).toLocalDateTime()
     val localDate4 = date.toInstant().atZone(ZoneId.systemDefault()).toLocalDate()
     val localDate5 = Instant.ofEpochMilli(date.time).atZone(ZoneId.systemDefault()).toLocalDate()
@@ -31,7 +31,7 @@ fun main() {
 
     val localDateTime1 = LocalDateTime.of(2008, Month.OCTOBER, 10, 23, 10, 0)
 
-
+    println(" date is: $date")
     println(" localDate1 is $localDate1 day1Start: $startOfDay1 day1End: $endOfDate1")
     println(" localDate2 is $localDate2 day2Start: $startOfDay2")
     println(" localDate3 is $localDate3 day3Start: $startOfDay3 day3End: $endOfDate3")
