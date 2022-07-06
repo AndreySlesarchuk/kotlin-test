@@ -1,4 +1,4 @@
-package tasks
+package main.java.by.atmm.kotlin.tasks
 
 import java.util.*
 

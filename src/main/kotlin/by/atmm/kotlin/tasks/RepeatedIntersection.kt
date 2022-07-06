@@ -1,4 +1,4 @@
-package tasks
+package main.java.by.atmm.kotlin.tasks
 
 /**
  *  @author Andrey Slesarchuk
