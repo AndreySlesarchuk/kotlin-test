@@ -14,6 +14,7 @@ import java.time.Duration
  *
  */
 
+
 class ShortLink {
     fun getShortLink(uriStr: String, map: Map<String, String>?): String {
         var responseMap: MutableMap<*, *>? = null
@@ -50,6 +51,7 @@ class ShortLink {
 
         @JvmStatic
         fun main(args: Array<String>) {
+
             val linkStr = "https://ryanharrison.co.uk/2018/06/15/make-http-requests-kotlin.html"
             val sl = ShortLink()
             val jsonData: MutableMap<String, String> = HashMap()

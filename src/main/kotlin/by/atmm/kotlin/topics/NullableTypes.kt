@@ -6,6 +6,14 @@ package topics
  */
 
 fun main() {
+
+    val e: String? = null
+    val f: String? = "Mike"
+    val g: String? = ""
+
+    val r = (e?.length?:0) + (f?.length ?:0) + (g?.length ?:0)
+    println(r)
+
     val a: String = "Hello"
     //a = null // NPE excluded
     println(a)
@@ -15,7 +23,7 @@ fun main() {
 
     // safe call
     //  Elvis
-    val l = b?.length ?: 111
+    val l = b?.length ?: 111 // value we want
     println("l is $l")
 
     b = if ((0..10).random() > 5) "asdf" else null
