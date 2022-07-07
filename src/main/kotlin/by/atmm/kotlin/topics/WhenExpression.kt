@@ -8,12 +8,16 @@ package topics
 fun main() {
     testWhen(1)
     testWhen("Hello")
-    testWhen(15)
+    testWhen(10)
     testWhen(-1)
 //    One
+//    Season: Winter
 //    A string was entered, its length is: 5
+//    Season: Not found
 //    From 10 to 20
+//    Season: Autumn
 //    Something else
+//    Season: Not found
 
     testIf(50)
 //    Do something
@@ -31,7 +35,20 @@ fun testWhen(input: Any) {
         else -> println("Something else")
     }
 
+    val season = when (input) {
+        1, 2, 3 -> {
+            "Winter"
+        }
+        in 3..5 -> "Spring"
+        in 6..8 -> "Summer"
+        in 9..11 -> "Autumn"
+        else -> {
+            "Not found"
+        }
+    }
+    println("Season: $season")
 }
+
 
 // testIF
 fun testIf(incomeCount: Any) {
