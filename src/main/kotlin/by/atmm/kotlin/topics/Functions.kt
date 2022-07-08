@@ -19,13 +19,12 @@ fun main() {
     testDefaultArguments(33, 44)
 
     printEven(1, 2, 3, 4, 5, 6, 7, 8, 9, 10)
-    printEven(*intArrayOf(1, 2, 3, 4, 5), 6, 7, 8, 9, 10)
+    printEven(*intArrayOf(9, 8, 7, 6, 5), 6, 7, 8, 9, 10)
 
     println("Max: ${max(11, 22)}")
     println("Crop: ${crop("JavaKotlin")}")
     println("Crop: ${crop("Java")}")
     println("Sum: ${sum(1, 2, 3, 4, 5, 6, 7)}")
-
 
     val numbers = mutableListOf<Int>(5, 8, 12, -3, 7, 6)  // arrayOf(5, 8, 12, -3, 7, 6)
     var result = sort(numbers)
@@ -35,6 +34,25 @@ fun main() {
     val numbersA = arrayOf(5, 8, 12, -3, 7, 6)
     result = sort(numbersA)
     for (i in result) print(" $i")
+    println()
+
+    printInfo("Slesarchuk", "Mike", "Andreevich")
+    printInfo(firstName = "Andrey", patronymic = "Vasilyevich")
+    printInfo(firstName = "Dennis", patronymic = null)
+
+}
+
+fun printInfo(lastName: String = "", firstName: String = "", patronymic: String? = "") {
+    if (lastName.isNotEmpty()) {
+        print("Last name: $lastName ")
+    }
+    if (firstName.isNotEmpty()) {
+        print("First name: $firstName ")
+    }
+    if (patronymic?.isNotEmpty() == true) {
+        print("Patronymic: $patronymic")
+    }
+    print("\n")
 }
 
 fun sort(numbers: MutableList<Int>): List<Int> {
