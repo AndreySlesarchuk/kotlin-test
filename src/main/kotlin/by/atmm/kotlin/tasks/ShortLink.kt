@@ -1,10 +1,9 @@
+import com.fasterxml.jackson.databind.ObjectMapper
 import java.net.URI
 import java.net.http.HttpClient
 import java.net.http.HttpRequest
 import java.net.http.HttpRequest.BodyPublishers
 import java.net.http.HttpResponse
-import java.util.HashMap
-import com.fasterxml.jackson.databind.ObjectMapper
 import java.time.Duration
 
 
@@ -17,28 +16,31 @@ import java.time.Duration
 
 class ShortLink {
     fun getShortLink(uriStr: String, map: Map<String, String>?): String {
-        var responseMap: MutableMap<*, *>? = null
-        val objectMapper = ObjectMapper()
+        val responseMap: MutableMap<*, *>? = try {
+            val objectMapper = ObjectMapper()
 
-        val requestBody: String = objectMapper
-            .writerWithDefaultPrettyPrinter()
-            .writeValueAsString(map)
+            val requestBody: String = objectMapper
+                .writerWithDefaultPrettyPrinter()
+                .writeValueAsString(map)
 
-        val request = HttpRequest.newBuilder()
-            .uri(URI.create(uriStr))
-            .timeout(Duration.ofSeconds(3))
-            .header("Content-Type", "application/json")
-            .header(
-                "x-goo-api-token",
-                "qMMJkTBBbMLUi5IAgYLm8jbF2y8iD2nULA0xc1UcQ6oxtDL4htbJTeR56JWm"
-            )
-            .POST(BodyPublishers.ofString(requestBody))
-            .build()
+            val request = HttpRequest.newBuilder()
+                .uri(URI.create(uriStr))
+                .timeout(Duration.ofSeconds(3))
+                .header("Content-Type", "application/json")
+                .header(
+                    "x-goo-api-token",
+                    "qMMJkTBBbMLUi5IAgYLm8jbF2y8iD2nULA0xc1UcQ6oxtDL4htbJTeR56JWm"
+                )
+                .POST(BodyPublishers.ofString(requestBody))
+                .build()
 
-        val response = HttpClient.newHttpClient()
-            .send(request, HttpResponse.BodyHandlers.ofString())
-        responseMap = objectMapper.readValue(response.body(), MutableMap::class.java)
-
+            val response = HttpClient.newHttpClient()
+                .send(request, HttpResponse.BodyHandlers.ofString())
+            objectMapper.readValue(response.body(), MutableMap::class.java)
+        } catch (e: Exception) {
+            println("Short link: data to work is not correct $e")
+            null
+        }
         return if (responseMap == null || responseMap["message"] != "Link successfully created") {
             ""
         } else {
