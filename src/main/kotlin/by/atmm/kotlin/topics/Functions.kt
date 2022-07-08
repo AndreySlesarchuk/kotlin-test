@@ -40,7 +40,39 @@ fun main() {
     printInfo(firstName = "Andrey", patronymic = "Vasilyevich")
     printInfo(firstName = "Dennis", patronymic = null)
 
+    show(square(8))
+    show(square(maxV(8, square(3))))
+
+    val listOfNumbers = mutableListOf<Int>()
+    for (i in 0..99) listOfNumbers.add(i)
+    val listOfEvenNumbers = listOfNumbers.filter { it % 2 == 0 }
+    showList(listOfEvenNumbers)
+
+    val names = listOf("Vasiliy", "Andrey", "Mike", "Anna")
+    showList(names.filter { it.startsWith("A") })
+
+    val numbers2 = (0..100).toList()
+    //val doubleNumbers = numbers2.map {n -> n * 2 }
+    val doubleNumbers = numbers2.map { it * 2 }
+    showList(doubleNumbers)
+    val employees = numbers2.map { "Employee №$it" }
+    showList(employees)
+    val array = arrayOf(8, 13, -7, 49, 19)
+    showList(array.sorted())
+    showList(array.sortedDescending())
 }
+
+
+val square: (Int) -> Int = { it * it }
+val maxV: (Int, Int) -> Int = { a, b -> if (a > b) a else b }
+val show: (Any) -> Unit = {
+    println(it)
+}
+val showList: (List<*>) -> Unit = {
+    for (i in it) print("$i ")
+    println()
+}
+
 
 fun printInfo(lastName: String = "", firstName: String = "", patronymic: String? = "") {
     if (lastName.isNotEmpty()) {
@@ -67,6 +99,7 @@ fun sort(numbers: MutableList<Int>): List<Int> {
     }
     return numbers
 }
+
 fun sort(numbers: Array<Int>) = sort(numbers.toMutableList())
 fun sort(vararg numbers: Int) = sort(numbers.toMutableList())
 
