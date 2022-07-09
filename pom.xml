@@ -32,7 +32,11 @@
             <artifactId>jackson-databind</artifactId>
             <version>2.13.3</version>
         </dependency>
-
+        <dependency>
+            <groupId>org.jetbrains.kotlinx</groupId>
+            <artifactId>kotlinx-coroutines-core-jvm</artifactId>
+            <version>1.6.3</version>
+        </dependency>
     </dependencies>
 
     <build>
