@@ -60,6 +60,13 @@ fun main() {
     val array = arrayOf(8, 13, -7, 49, 19)
     showList(array.sorted())
     showList(array.sortedDescending())
+
+    val initArray = mutableListOf<Int>()
+    for (i in 0 until 100 ) initArray.add((Math.random()*1000).toInt())
+    val result1 = initArray
+        .filter { it % 5 == 0 || it % 3 == 0 }.map { it * it }
+        .sortedDescending().map {"$it" }
+    showList(result1)
 }
 
 
