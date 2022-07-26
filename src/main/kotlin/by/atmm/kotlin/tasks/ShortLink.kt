@@ -13,7 +13,6 @@ import java.time.Duration
  *
  */
 
-
 class ShortLink {
     fun getShortLink(uriStr: String, map: Map<String, String>?): String {
         val responseMap: MutableMap<*, *>? = try {
