@@ -9,6 +9,7 @@ fun main() {
     val a = listOf(1, 2, 3, 4, 5)
 
     a.forEach { e -> println(e) }
+    a.forEach { println(it) }
 
     println(a.map { e -> e * 2 })
     println(a.filter { e -> e % 2 == 0 })

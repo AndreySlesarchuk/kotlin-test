@@ -41,7 +41,7 @@ fun main() {
     printInfo(firstName = "Dennis", patronymic = null)
 
     show(square(8))
-    show(square(maxV(8, square(3))))
+    show(square(maxV(8, square(3).toInt())))
 
     val listOfNumbers = mutableListOf<Int>()
     for (i in 0..99) listOfNumbers.add(i)
@@ -50,6 +50,7 @@ fun main() {
 
     val names = listOf("Vasiliy", "Andrey", "Mike", "Anna")
     showList(names.filter { it.startsWith("A") })
+    showLine()
 
     val numbers2 = (0..100).toList()
     //val doubleNumbers = numbers2.map {n -> n * 2 }
@@ -63,7 +64,7 @@ fun main() {
 }
 
 
-val square: (Int) -> Int = { it * it }
+val square: (Int) -> Double = { (it * it).toDouble() }
 val maxV: (Int, Int) -> Int = { a, b -> if (a > b) a else b }
 val show: (Any) -> Unit = {
     println(it)
@@ -72,6 +73,8 @@ val showList: (List<*>) -> Unit = {
     for (i in it) print("$i ")
     println()
 }
+
+val showLine: () -> Unit = { println("------------------------------------------------------------------") }
 
 
 fun printInfo(lastName: String = "", firstName: String = "", patronymic: String? = "") {
@@ -111,6 +114,8 @@ fun testSimple(x: Int, y: Int): Int = x + y
 fun max(x: Int, y: Int) = if (x > y) x else y
 
 fun crop(str: String) = str.substring(0, Math.min(5, str.length))
+
+val sum: (Int) -> Int = { it * it }
 
 fun sum(vararg numbers: Int): Int {
     var result = 0
