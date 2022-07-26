@@ -19,7 +19,7 @@ fun main() {
     testDefaultArguments(33, 44)
 
     printEven(1, 2, 3, 4, 5, 6, 7, 8, 9, 10)
-    printEven(*intArrayOf(9, 8, 7, 6, 5), 6, 7, 8, 9, 10)
+    // printEven(*intArrayOf(9, 8, 7, 6, 5), 6, 7, 8, 9, 10)
 
     println("Max: ${max(11, 22)}")
     println("Crop: ${crop("JavaKotlin")}")
@@ -61,6 +61,26 @@ fun main() {
     val array = arrayOf(8, 13, -7, 49, 19)
     showList(array.sorted())
     showList(array.sortedDescending())
+
+    val initArray = mutableListOf<Int>()
+    for (i in 0 until 100) initArray.add((Math.random() * 1000).toInt())
+    val result1 = initArray
+        .filter { it % 5 == 0 || it % 3 == 0 }.map { it * it }
+        .sortedDescending().map { "$it" }
+    showList(result1)
+
+    var first30employee = employees.take(30)
+    showList(first30employee)
+    var last30employee = employees.takeLast(30)
+    showList(last30employee)
+    first30employee = employees.drop(30)
+    showList(first30employee)
+    last30employee = employees.dropLast(970)
+    showList(last30employee)
+
+    val array3 = generateSequence(0) { it + 2 }
+    showList(array3.take(10).toList())
+
 }
 
 

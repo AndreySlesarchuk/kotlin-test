@@ -48,7 +48,8 @@ fun main() {
     println("And this first word is: ${wordMap.maxByOrNull { it.value }?.key}")
 
     val testMap = mutableMapOf<String, Int>()
-    longString.split(" ", ".").groupBy { it }.map { w -> testMap.put(w.key, w.value.size) }
+//    longString.split(" ", ".").groupBy { it }.map { w -> testMap.put(w.key, w.value.size) }
+    longString.split(" ", ".").groupBy { it }.map { testMap.put(it.key, it.value.size) }
     println("Test word is: ${testMap.maxByOrNull { it.value }?.key}")
 
     val words = longString.split("\\W+|\\s+".toRegex())
