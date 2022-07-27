@@ -52,14 +52,12 @@ class ShortLink {
 
         @JvmStatic
         fun main(args: Array<String>) {
-
             val linkStr = "https://ryanharrison.co.uk/2018/06/15/make-http-requests-kotlin.html"
             val sl = ShortLink()
             val jsonData: MutableMap<String, String> = HashMap()
             jsonData["url"] = linkStr
             val shortLink = sl.getShortLink(URI_STRING, jsonData)
             println("Short link: $shortLink")//log.fine(shortLink)
-
         }
     }
 }
