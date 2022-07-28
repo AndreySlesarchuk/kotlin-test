@@ -9,7 +9,6 @@ import kotlin.concurrent.thread
  *  @date 2022-07-09
  */
 
-
 fun main() {
     test01()
     test02()

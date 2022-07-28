@@ -15,9 +15,7 @@ fun main() {
 
 fun groupWords(words: Array<String>): List<List<String>> {
     val result: MutableList<List<String>> = mutableListOf()
-
     val map = mutableMapOf<String, MutableList<String>>()
-
     for (word in words) {
         val sortedWord = word.toCharArray().sorted().joinToString("")
 
@@ -26,10 +24,8 @@ fun groupWords(words: Array<String>): List<List<String>> {
         else
             map[sortedWord] = mutableListOf(word)
     }
-
     for (entity in map) {
         result.add(entity.value)
     }
-
     return result
 }
