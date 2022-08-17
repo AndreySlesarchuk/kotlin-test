@@ -40,7 +40,21 @@ fun main() {
 
     iterateBetweenDates(localDate2, localDate2.plusDays(5))
 
+    val now = LocalDateTime.now(ZoneId.systemDefault())
+    val milliseconds = now.atZone(ZoneId.systemDefault())?.toInstant()?.toEpochMilli()
+
+    val dateFromMillis: Long? = LocalDateTime.now().toMillis()
+    val dateToMillis: Long? = LocalDateTime.now().minusDays(7).toMillis()
+    println(" dateFromMillis is $dateFromMillis dateToMillis: $dateToMillis")
+    val dateFrom: Date = Date.from(Instant.ofEpochMilli(dateFromMillis!!))
+    val dateTo: Date = Date.from(Instant.ofEpochMilli(dateToMillis!!))
+    println(" dateFrom is $dateFrom dateTo: $dateTo")
+    println(" milliseconds is $milliseconds")
+    println(" localDateTime is $now")
+
 }
+
+fun LocalDateTime.toMillis(zone: ZoneId = ZoneId.systemDefault()) = atZone(zone)?.toInstant()?.toEpochMilli()
 
 fun iterateBetweenDates(start: LocalDate, end: LocalDate?) {
     var date = start
