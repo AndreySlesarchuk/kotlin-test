@@ -40,8 +40,13 @@ fun main() {
 
     iterateBetweenDates(localDate2, localDate2.plusDays(5))
 
+
+    // https://code.luasoftware.com/tutorials/kotlin/localdatetime-to-timestamp-epoch-milliseconds/
     val now = LocalDateTime.now(ZoneId.systemDefault())
     val milliseconds = now.atZone(ZoneId.systemDefault())?.toInstant()?.toEpochMilli()
+    val millisecondsOfCurrentTime = LocalDateTime.now().atZone(ZoneId.systemDefault())?.toInstant()?.toEpochMilli()
+
+    val millisecondsOfStartCurrentDay = LocalDate.now().atStartOfDay().atZone(ZoneId.systemDefault())?.toInstant()?.toEpochMilli()
 
     val dateFromMillis: Long? = LocalDateTime.now().toMillis()
     val dateToMillis: Long? = LocalDateTime.now().minusDays(7).toMillis()
@@ -51,6 +56,9 @@ fun main() {
     println(" dateFrom is $dateFrom dateTo: $dateTo")
     println(" milliseconds is $milliseconds")
     println(" localDateTime is $now")
+    println(" milliseconds of current time is $millisecondsOfCurrentTime")
+    println(" milliseconds of start current day is $millisecondsOfStartCurrentDay")
+    println(" date of current day is ${Date.from(Instant.ofEpochMilli(millisecondsOfStartCurrentDay!!))}")
 
 }
 
