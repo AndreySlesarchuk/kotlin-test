@@ -1,30 +1,31 @@
 package topics
 
+import java.math.BigDecimal
+
 /**
  *  @author Andrey Slesarchuk
  *  @date 2022-05-03
  */
 
+val square: (Int) -> Double = { (it * it).toDouble() }
+val maxV: (Int, Int) -> Int = { a, b -> if (a > b) a else b }
+val minV: (BigDecimal, BigDecimal) -> BigDecimal = {
+        a, b -> if (b.compareTo(a) > 0) a else b }
+val show: (Any) -> Unit = {// unit is analog void in java
+    println(it)
+}
+val showList: (List<*>) -> Unit = {
+    for (i in it) print("$i ")
+    println()
+}
+
+val showLine: () -> Unit = { println("------------------------------------------------------------------") }
+
+
 fun main() {
     // From Kotlin Koans
     // https://play.kotlinlang.org/koans/Introduction/Named%20arguments/Task.ktghj
 
-    println(testSimple(1, 2))
-    println(testString(10))
-    println(testNamedArguments(y = 10, z = 1, x = 5))
-
-    testDefaultArguments()
-    testDefaultArguments(5)
-    testDefaultArguments(y = 6)
-    testDefaultArguments(33, 44)
-
-    printEven(1, 2, 3, 4, 5, 6, 7, 8, 9, 10)
-    // printEven(*intArrayOf(9, 8, 7, 6, 5), 6, 7, 8, 9, 10)
-
-    println("Max: ${max(11, 22)}")
-    println("Crop: ${crop("JavaKotlin")}")
-    println("Crop: ${crop("Java")}")
-    println("Sum: ${sum(1, 2, 3, 4, 5, 6, 7)}")
 
     val numbers = mutableListOf<Int>(5, 8, 12, -3, 7, 6)  // arrayOf(5, 8, 12, -3, 7, 6)
     var result = sort(numbers)
@@ -81,21 +82,24 @@ fun main() {
     val array3 = generateSequence(0) { it + 2 }
     showList(array3.take(10).toList())
 
+    println(testSimple(1, 2))
+    println(testString(10))
+    println(testNamedArguments(y = 10, z = 1, x = 5))
+
+    testDefaultArguments()
+    testDefaultArguments(5)
+    testDefaultArguments(y = 6)
+    testDefaultArguments(33, 44)
+
+    printEven(1, 2, 3, 4, 5, 6, 7, 8, 9, 10)
+    // printEven(*intArrayOf(9, 8, 7, 6, 5), 6, 7, 8, 9, 10)
+
+    println("Max: ${max(11, 22)}")
+    println("Crop: ${crop("JavaKotlin")}")
+    println("Crop: ${crop("Java")}")
+    println("Sum: ${sum(1, 2, 3, 4, 5, 6, 7)}")
+
 }
-
-
-val square: (Int) -> Double = { (it * it).toDouble() }
-val maxV: (Int, Int) -> Int = { a, b -> if (a > b) a else b }
-val show: (Any) -> Unit = {
-    println(it)
-}
-val showList: (List<*>) -> Unit = {
-    for (i in it) print("$i ")
-    println()
-}
-
-val showLine: () -> Unit = { println("------------------------------------------------------------------") }
-
 
 fun printInfo(lastName: String = "", firstName: String = "", patronymic: String? = "") {
     if (lastName.isNotEmpty()) {
