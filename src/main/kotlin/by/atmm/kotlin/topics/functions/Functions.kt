@@ -19,6 +19,11 @@ val showList: (List<*>) -> Unit = {
     println()
 }
 
+val showListWithHeader: (String, List<*>) -> Unit = { header, array ->
+        print(header)
+        showList(array)
+}
+
 val showLine: () -> Unit = { println("------------------------------------------------------------------") }
 
 
