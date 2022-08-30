@@ -1,5 +1,10 @@
 import topics.showListWithHeader
 
+/**
+ *  @author Andrey Slesarchuk
+ *  @date 2022-08-30
+ */
+
 fun main() {
     val array = (0..50).toList()
     val employees = array.map { "Employee № $it" }
