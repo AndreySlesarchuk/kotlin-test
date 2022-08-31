@@ -21,27 +21,24 @@ fun main() {
         for (i in 0 until 1000) {
             add((Math.random() * 100).toInt())
         }
-
-        println(sum())
-        println(average())
-        println(min())
-        println(max())
-        println(first())
-        println(last())
+        println("Sum: ${sum()} Average: ${average()} Min: ${min()} Max: ${max()} First: ${first()} Last: ${last()}  ")
     }
 
-    for (i in 0 until 1000) {
-        list.add((Math.random() * 100).toInt())
-    }
+    println("${list.sum()} ${list.average()} ${list.min()} ${list.max()} ${list.first()} ${list.last()}")
 
-    println(list.sum())
-    println(list.average())
-    println(list.min())
-    println(list.max())
-    println(list.first())
-    println(list.last())
+    val obj = mutableMapOf<String, String>()
+    obj.put("1", "One")
+    obj.put("2", "Two")
+    obj.put("3", "Three")
+    myWith(obj, {
+        keys
+        values.stream()
+        for (v in values) {
+            println(v)
+        }
+    })
+}
 
-
-
-
+inline fun <T, R> myWith(obj: T, operation: T.() -> R): R {
+    return obj.operation()
 }
