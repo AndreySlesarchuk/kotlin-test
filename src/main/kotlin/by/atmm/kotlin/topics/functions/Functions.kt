@@ -1,4 +1,4 @@
-package topics
+package by.atmm.kotlin.topics.functions
 
 import java.math.BigDecimal
 
@@ -9,8 +9,7 @@ import java.math.BigDecimal
 
 val square: (Int) -> Double = { (it * it).toDouble() }
 val maxV: (Int, Int) -> Int = { a, b -> if (a > b) a else b }
-val minV: (BigDecimal, BigDecimal) -> BigDecimal = {
-        a, b -> if (b.compareTo(a) > 0) a else b }
+val minV: (BigDecimal, BigDecimal) -> BigDecimal = { a, b -> if (b.compareTo(a) > 0) a else b }
 val show: (Any) -> Unit = {// unit is analog void in java
     println(it)
 }
@@ -20,8 +19,8 @@ val showList: (List<*>) -> Unit = {
 }
 
 val showListWithHeader: (String, List<*>) -> Unit = { header, array ->
-        print(header)
-        showList(array)
+    print(header)
+    showList(array)
 }
 
 val showLine: () -> Unit = { println("------------------------------------------------------------------") }

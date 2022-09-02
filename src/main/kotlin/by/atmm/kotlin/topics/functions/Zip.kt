@@ -1,5 +1,5 @@
-import topics.showList
-import topics.showListWithHeader
+import by.atmm.kotlin.topics.functions.showList
+import by.atmm.kotlin.topics.functions.showListWithHeader
 
 /**
  *  @author Andrey Slesarchuk

@@ -1,7 +1,5 @@
 package by.atmm.kotlin.topics.functions
 
-import topics.showList
-
 /**
  *  @author Andrey Slesarchuk
  *  @date 2022-08-29
@@ -14,7 +12,7 @@ fun main() {
         initArray.add((Math.random() * 1000).toInt())
     }
     val result = initArray
-        .filter { it % 5 == 0 || it %3 == 0  }
+        .filter { it % 5 == 0 || it % 3 == 0 }
         .map { it * it }
         .sortedDescending()
         .map { "$it" }

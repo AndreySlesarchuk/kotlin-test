@@ -1,8 +1,5 @@
 package by.atmm.kotlin.topics.functions
 
-import topics.show
-import topics.showListWithHeader
-
 /**
  *  @author Andrey Slesarchuk
  *  @date 2022-08-30
