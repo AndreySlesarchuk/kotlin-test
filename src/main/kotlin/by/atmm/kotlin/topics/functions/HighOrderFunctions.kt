@@ -26,7 +26,7 @@ fun main() {
     val listOfEvenNumbers = listOfNumbers.filter { it % 2 == 0 }
     showList(listOfEvenNumbers)
 
-    val names = listOf("Mike", "Vasil", "Valentina", "Andrey")
+    val names = listOf("Mike", "Vasil", "Valentina", "Andrey", "Tanya", "Maria")
     val namesStartsFromV = names.filter { it.startsWith("V") }
     showList(namesStartsFromV)
 
