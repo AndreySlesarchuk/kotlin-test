@@ -7,7 +7,11 @@ import java.util.Calendar
  *  @date 2022-09-01
  */
 
-class Worker(val name: String, val position: String, val startYear: Int) {
+open class Worker(val name: String, val age: Int, val position: String, val startYear: Int) {
+    open fun work() {
+        println("Working")
+    }
+
     val expirience: Int
         get() = Calendar.getInstance().get(Calendar.YEAR) - startYear
 
