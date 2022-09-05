@@ -7,6 +7,15 @@ package by.atmm.kotlin.topics.classes.worker
 
 fun main() {
 
+    val workersAbstract = mutableListOf<WorkerAbstract>()
+    workersAbstract.add(Seller("Egor", 27))
+    workersAbstract.add(Seller("Ivan", 30))
+    workersAbstract.add(Seller("Sergey", 34))
+
+    for (worker in workersAbstract) {
+        worker.work()
+    }
+
     val workers = mutableListOf<Worker>()
     workers.add(Worker("Egor", 27, "", 2018))
     workers.add(Worker("Ivan", 30, "", 2018))
