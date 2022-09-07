@@ -7,26 +7,37 @@ package by.atmm.kotlin.topics.classes.worker
 
 fun main() {
 
-    val workersAbstract = mutableListOf<WorkerAbstract>()
-    workersAbstract.add(Seller("Egor", 27))
-    workersAbstract.add(Seller("Ivan", 30))
-    workersAbstract.add(Seller("Sergey", 34))
+    val workersA = mutableListOf<WorkerAbstract>()
+    workersA.add(Seller("Egor", 27))
+    workersA.add(Seller("Ivan", 30))
+    workersA.add(Seller("Sergey", 34))
+    workersA.add(Programmer("Mike", 13, "Kotlin"))
+    workersA.add(Programmer("Andrey", 49, "Java"))
+    workersA.add(Chief("Vasily", 74))
 
-    for (worker in workersAbstract) {
+    val cleaners = workersA.filter {it is Cleaner}.map { it as Cleaner }
+    cleaners.forEach { print(" ${it.clean()}") }
+    println()
+
+    for (worker in workersA) {
         worker.work()
+        if (worker is Programmer) {
+            println(worker.language)
+        }
+        if (worker is Cleaner) {
+            worker.clean()
+        }
     }
 
     val workers = mutableListOf<Worker>()
     workers.add(Worker("Egor", 27, "", 2018))
     workers.add(Worker("Ivan", 30, "", 2018))
     workers.add(Worker("Sergey", 34, "", 2018))
-    workers.add(Programmer("Mike", 13, "Kotlin"))
-    workers.add(Programmer("Andrey", 49, "Java"))
 
     for (worker in workers) {
         worker.work()
-    }
 
+    }
 
     val programmer = Worker("Mike", 13, "Programmer", 2018)
     programmer.printInfo()
