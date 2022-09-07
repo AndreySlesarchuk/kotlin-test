@@ -1,4 +1,4 @@
-package by.atmm.kotlin.topics.classes.waterboy;
+package by.atmm.kotlin.topics.classes.waterboy
 
 /**
  *  @author Andrey Slesarchuk
@@ -6,7 +6,12 @@ package by.atmm.kotlin.topics.classes.waterboy;
  */
 
 class Sportsman {
-    fun invokeWaterBoy(waterBoy: WaterBoy ) {
-        waterBoy.bringWater();
+    fun invokeWaterBoy(waterBoy: WaterBoy) {
+        waterBoy.bringWater()
     }
+
+    inline fun invokeWaterBoy(bringWater: () -> Unit) {
+        bringWater()
+    }
+
 }

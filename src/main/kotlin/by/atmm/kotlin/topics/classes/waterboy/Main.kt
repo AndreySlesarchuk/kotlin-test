@@ -12,4 +12,6 @@ fun main() {
             println("Water brought!")
         }
     })
+
+    sportsman.invokeWaterBoy { println("Water2 brought!") }
 }
