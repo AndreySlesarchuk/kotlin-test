@@ -15,6 +15,7 @@ class MyRandom {
         private const val SATURDAY = "Saturday"
         private const val SUNDAY = "Sunday"
 
+
         fun randomInt(from: Int, to: Int) = (Math.random() * (to - from + 1)).toInt() + from
         fun randomBoolean() = randomInt(0, 1) > 0
         fun randomDayOfWeek(): String {
@@ -29,6 +30,14 @@ class MyRandom {
                 else -> SUNDAY
             }
         }
+
+        fun getRandomString(length: Int) : String {
+            val allowedChars = ('A'..'Z') + ('a'..'z') + ('0'..'9')
+            return (1..length)
+                .map { allowedChars.random() }
+                .joinToString("")
+        }
+
     }
 
 }

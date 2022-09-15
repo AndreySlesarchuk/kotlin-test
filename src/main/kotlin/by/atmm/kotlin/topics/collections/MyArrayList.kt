@@ -1,5 +1,7 @@
 package by.atmm.kotlin.topics.collections
 
+import javax.swing.MenuElement
+
 /**
  *  @author Andrey Slesarchuk
  *  @date 2022-09-08
@@ -8,6 +10,16 @@ package by.atmm.kotlin.topics.collections
 class MyArrayList<T> : MyList<T> {
     var array = arrayOfNulls<Any>(10)
     var size = 0
+
+    companion object {
+        fun<E> myListOf(vararg elements: E) : MyArrayList<E> {
+            val list = MyArrayList<E>()
+            for (element in elements) {
+                list.add(element)
+            }
+            return list
+        }
+    }
 
     override fun get(index: Int): T {
         if (index in 0 until size) {
