@@ -1,6 +1,7 @@
 package topics
 
 import java.time.*
+import java.time.temporal.ChronoUnit
 import java.util.*
 
 
@@ -10,6 +11,13 @@ import java.util.*
  */
 
 fun main() {
+
+    val nowTimeMinus5Minutes = Date.from(
+        Instant.now().minusSeconds(300)
+            .truncatedTo(ChronoUnit.MINUTES)
+    )
+
+    println(" endTime is: $nowTimeMinus5Minutes")
 
     val localDate1 = LocalDate.now()
     val localDate2 = LocalDate.parse("2002-10-13")
