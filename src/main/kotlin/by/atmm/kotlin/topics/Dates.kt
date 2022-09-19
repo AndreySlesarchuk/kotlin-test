@@ -1,5 +1,6 @@
 package topics
 
+import org.apache.poi.ss.usermodel.DateUtil.toLocalDateTime
 import java.time.*
 import java.time.temporal.ChronoUnit
 import java.util.*
@@ -12,12 +13,16 @@ import java.util.*
 
 fun main() {
 
-    val nowTimeMinus5Minutes = Date.from(
+    val nowTimeMinus5Minutes1 = Date.from(
         Instant.now().minusSeconds(300)
             .truncatedTo(ChronoUnit.MINUTES)
     )
+    println(" nowTimeMinus5Minutes1 is: $nowTimeMinus5Minutes1")
 
-    println(" endTime is: $nowTimeMinus5Minutes")
+    val nowTimeMinus5Minutes2 = ZonedDateTime.of(toLocalDateTime(Date()), ZoneOffset.UTC)
+        .truncatedTo(ChronoUnit.MINUTES).minusMinutes(5)
+
+    println(" nowTimeMinus5Minutes2 is:  $nowTimeMinus5Minutes2")
 
     val localDate1 = LocalDate.now()
     val localDate2 = LocalDate.parse("2002-10-13")
@@ -80,3 +85,4 @@ fun iterateBetweenDates(start: LocalDate, end: LocalDate?) {
         date = date.plusDays(1)
     }
 }
+
