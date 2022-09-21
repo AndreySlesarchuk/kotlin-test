@@ -7,11 +7,11 @@ package topics
 
 fun main() {
 
-    val e: String? = null
+    val e: String? = "Andrey"
     val f: String? = "Mike"
     val g: String? = ""
 
-    val r = (e?.length?:0) + (f?.length ?:0) + (g?.length ?:0)
+    val r = (e?.length ?: 0) + (f?.length ?: 0) + (g?.length ?: 0)
     println(r)
 
     val a: String = "Hello"
