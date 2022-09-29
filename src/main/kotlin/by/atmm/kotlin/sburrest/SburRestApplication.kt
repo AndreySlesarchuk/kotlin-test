@@ -6,7 +6,6 @@ import org.springframework.boot.context.properties.ConfigurationProperties
 import org.springframework.boot.context.properties.ConfigurationPropertiesScan
 import org.springframework.context.annotation.Bean
 
-
 @SpringBootApplication
 @ConfigurationPropertiesScan
 open class SburRestApplication {
