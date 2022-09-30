@@ -18,6 +18,7 @@ fun main() {
 }
 
 fun getFrequentWord(text: String): String? {
+
     val result = text
         .lowercase(Locale.getDefault())
         .split("\\W+|\\s+".toRegex())
@@ -26,4 +27,5 @@ fun getFrequentWord(text: String): String? {
         .maxByOrNull { it.value }
         ?.key
     return result
+
 }

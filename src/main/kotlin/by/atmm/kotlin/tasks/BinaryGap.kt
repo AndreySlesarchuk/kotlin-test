@@ -16,6 +16,7 @@ fun main() {
 }
 
 fun Solution(n: Int): Int {
+
     if (n == 0) return 0
     val binaryString = Integer.toBinaryString(n)
     var zeroSequences: List<String> = binaryString.split("1")
@@ -23,4 +24,5 @@ fun Solution(n: Int): Int {
         zeroSequences = zeroSequences.dropLast(1)
     val result: Int = zeroSequences.groupBy { it.length }.maxOf { it.key }
     return result
+
 }
