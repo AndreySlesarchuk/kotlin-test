@@ -53,7 +53,6 @@ fun main() {
 
     iterateBetweenDates(localDate2, localDate2.plusDays(5))
 
-
     // https://code.luasoftware.com/tutorials/kotlin/localdatetime-to-timestamp-epoch-milliseconds/
     val now = LocalDateTime.now(ZoneId.systemDefault())
     val milliseconds = now.atZone(ZoneId.systemDefault())?.toInstant()?.toEpochMilli()
