@@ -14,7 +14,6 @@ fun main() {
 }
 
 fun countLetters(str: String): String {
-
     var result = ""
     var letter: Char = str.get(0)
     var count = 1
@@ -31,5 +30,4 @@ fun countLetters(str: String): String {
     result += "${letter}"
     if (count > 1) result += "$count"
     return result
-
 }

@@ -35,8 +35,4 @@ fun main() {
     println(list.max())
     println(list.first())
     println(list.last())
-
-
-
-
 }
