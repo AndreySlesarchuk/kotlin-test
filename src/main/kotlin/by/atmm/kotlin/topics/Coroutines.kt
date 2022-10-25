@@ -11,6 +11,7 @@ import kotlin.concurrent.thread
 
 fun main() {
     println("Main flow is proceeding 1")
+    test02()
     test01()
     test02()
     println("Main flow is proceeding 2")
@@ -21,7 +22,7 @@ fun test01() = runBlocking { // this: CoroutineScope
         delay(2000L) // non-blocking delay for 1 second (default time unit is ms)
         println("World 1 !") // print after delay
     }
-    print("Hello 1, ") // main coroutine continues while a previous one is delayed
+    println("Hello 1, ") // main coroutine continues while a previous one is delayed
 }
 
 fun test02() = runBlocking { // this: CoroutineScope
@@ -29,5 +30,5 @@ fun test02() = runBlocking { // this: CoroutineScope
         sleep(1000L) // non-blocking delay for 1 second (default time unit is ms)
         println("World 2 !!!") // print after delay
     }
-    print("Hello 2 ") // main coroutine continues while a previous one is delayed
+    println("Hello 2 ") // main coroutine continues while a previous one is delayed
 }
