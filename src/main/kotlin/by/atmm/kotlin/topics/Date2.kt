@@ -7,8 +7,10 @@ import java.util.*
 fun main() {
 
     println("minutes from the beginning of the day ${getDayMinutes(Date(), null)} here ${TimeZone.getDefault()} ")
-    val timeZone = TimeZone.getTimeZone("America/Chicago")
-    println("minutes from the beginning of the day ${getDayMinutes(Date(), timeZone.toZoneId())}  there $timeZone ")
+    val timeZone1 = TimeZone.getTimeZone("America/Chicago")
+    println("minutes from the beginning of the day ${getDayMinutes(Date(), timeZone1.toZoneId())}  there $timeZone1 ")
+    val timeZone2 = TimeZone.getTimeZone("Europe/Warsaw")
+    println("minutes from the beginning of the day ${getDayMinutes(Date(), timeZone2.toZoneId())}  there $timeZone2 ")
 
 }
 
