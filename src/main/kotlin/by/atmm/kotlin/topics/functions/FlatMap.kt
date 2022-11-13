@@ -13,6 +13,15 @@ fun main() {
         Pair("file3", listOf(9, 8, 7, 6, 5))
     )
 
+    val dataKeys = data.keys
+    println("Data keys: $dataKeys")
+
+    val dataValues = data.values
+    println("Data values: $dataValues")
+
+    val dataValuesList = data.flatMap { it.value }
+    println("Data values list: $dataValuesList")
+
     val dataAverage = data.flatMap { it.value }.average()
     println("Data average: $dataAverage")
 
