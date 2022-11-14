@@ -11,6 +11,7 @@ fun main() {
     for (i in 0..100) {
         initArray.add((Math.random() * 1000).toInt())
     }
+
     val result = initArray
         .filter { it % 5 == 0 || it % 3 == 0 }
         .map { it * it }
