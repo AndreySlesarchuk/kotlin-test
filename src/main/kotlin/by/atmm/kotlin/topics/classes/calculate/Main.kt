@@ -6,6 +6,7 @@ package by.atmm.kotlin.topics.classes.calculate
  */
 
 fun main() {
+
     println(MyRandom.randomInt(20, 50))
     println(MyRandom.randomBoolean())
     println(MyRandom.randomDayOfWeek())
@@ -14,4 +15,5 @@ fun main() {
 
     println(Calc.square(2))
     println(Calc.lenghtOfCircle(3f))
+
 }

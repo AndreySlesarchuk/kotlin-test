@@ -6,6 +6,7 @@ package by.atmm.kotlin.topics.classes.calculate
  */
 
 class MyRandom {
+
     companion object {
         private const val MONDAY = "Monday"
         private const val TUESDAY = "Tuesday"
@@ -14,7 +15,6 @@ class MyRandom {
         private const val FRIDAY = "Friday"
         private const val SATURDAY = "Saturday"
         private const val SUNDAY = "Sunday"
-
 
         fun randomInt(from: Int, to: Int) = (Math.random() * (to - from + 1)).toInt() + from
         fun randomBoolean() = randomInt(0, 1) > 0
@@ -31,13 +31,11 @@ class MyRandom {
             }
         }
 
-        fun getRandomString(length: Int) : String {
+        fun getRandomString(length: Int): String {
             val allowedChars = ('A'..'Z') + ('a'..'z') + ('0'..'9')
             return (1..length)
                 .map { allowedChars.random() }
                 .joinToString("")
         }
-
     }
-
 }
