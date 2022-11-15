@@ -6,11 +6,13 @@ package by.atmm.kotlin.topics.classes.cat
  */
 
 fun main() {
+
     val cat = Cat("Kesha", 13, 3f)
     println(cat.isOld) // true
     cat.age = 10
     println(cat.isOld) // false
     cat.printInfo() // Nikname: Kesha Age: 10 Weight: 3.0
+
 }
 
 // class functions extend. without access to the class.

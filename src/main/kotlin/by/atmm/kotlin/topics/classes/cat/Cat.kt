@@ -6,6 +6,7 @@ package by.atmm.kotlin.topics.classes.cat
  */
 
 class Cat(val name: String, var age: Int, val weight: Float= 0f) {
+
     val isOld: Boolean
         get() = age >= 12
 
