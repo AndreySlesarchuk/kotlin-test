@@ -6,6 +6,7 @@ package by.atmm.kotlin.topics.classes.database
  */
 
 object Database {
+
     val name = "main2.db"
     val version = 2
     val data = mutableListOf<String>()
@@ -13,4 +14,5 @@ object Database {
     fun insertData(str: String) {
         data.add(str)
     }
+
 }

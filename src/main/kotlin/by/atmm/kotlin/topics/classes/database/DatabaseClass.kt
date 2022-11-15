@@ -6,6 +6,7 @@ package by.atmm.kotlin.topics.classes.database
  */
 
 class DatabaseClass private constructor() {
+
     val name= "main.db"
     val data = mutableListOf<String>()
 
@@ -25,4 +26,5 @@ class DatabaseClass private constructor() {
             return instance
         }
     }
+
 }

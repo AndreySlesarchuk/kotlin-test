@@ -6,6 +6,7 @@ package by.atmm.kotlin.topics.classes.database
  */
 
 class Test {
+
     fun insertTestData(str: String) {
         DatabaseClass.getInstance().insertData(str)
     }
