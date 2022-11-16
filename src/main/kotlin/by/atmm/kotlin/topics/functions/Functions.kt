@@ -30,14 +30,17 @@ fun main() {
     // From Kotlin Koans
     // https://play.kotlinlang.org/koans/Introduction/Named%20arguments/Task.ktghj
 
-
     val numbers = mutableListOf<Int>(5, 8, 12, -3, 7, 6)  // arrayOf(5, 8, 12, -3, 7, 6)
     var result = sort(numbers)
+
     for (i in result) print(" $i")
     result = sort(5, 8, 12, -3, 7, 6)
+
     for (i in result) print(" $i")
+
     val numbersA = arrayOf(5, 8, 12, -3, 7, 6)
     result = sort(numbersA)
+
     for (i in result) print(" $i")
     println()
 
