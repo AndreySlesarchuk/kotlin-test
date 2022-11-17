@@ -109,6 +109,7 @@ fun main() {
 }
 
 fun printInfo(lastName: String = "", firstName: String = "", patronymic: String? = "") {
+
     if (lastName.isNotEmpty()) {
         print("Last name: $lastName ")
     }
@@ -119,9 +120,11 @@ fun printInfo(lastName: String = "", firstName: String = "", patronymic: String?
         print("Patronymic: $patronymic")
     }
     print("\n")
+
 }
 
 fun sort(numbers: MutableList<Int>): List<Int> {
+
     for (i in 1 until numbers.size) {
         for (j in numbers.size - 1 downTo i) {
             if (numbers[j] < numbers[j - 1]) {
@@ -132,6 +135,7 @@ fun sort(numbers: MutableList<Int>): List<Int> {
         }
     }
     return numbers
+
 }
 
 fun sort(numbers: Array<Int>) = sort(numbers.toMutableList())
