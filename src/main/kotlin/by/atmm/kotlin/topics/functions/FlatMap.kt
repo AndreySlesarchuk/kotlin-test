@@ -25,12 +25,17 @@ fun main() {
     val dataAverage = data.flatMap { it.value }.average()
     println("Data average: $dataAverage")
 
+    val dataCheck1 = data
+        .filter { it.value.all { it > 2 } }.flatMap { it.value }.min()
+    println("Data check min : $dataCheck1")
+
     val dataCheckAverage = data
         .filter { it.value.all { it > 0 } }.flatMap { it.value }.average()
+    println("Data check average : $dataCheckAverage")
+
     val dataCheckAverage2 = data
         .filterNot { it.value.any { it < 0 } }.flatMap { it.value }.average()
-    println("Data check average : $dataCheckAverage")
-    println("Data check average2: $dataCheckAverage2")
+     println("Data check average2: $dataCheckAverage2")
 
     val revenueByWeek = listOf(
         listOf(5, 7, 6, 4, 8),
