@@ -15,14 +15,20 @@ fun main() {
 }
 
 private fun getDayMinutes(date: Date, zoneId: ZoneId?): Int {
+
     val localDateTime = dateToLocalDateTime(date, zoneId)
     return localDateTime.hour * 60 + localDateTime.minute
+
 }
 
 private fun dateToLocalDateTime(date: Date, zoneId: ZoneId?): LocalDateTime {
+
     return LocalDateTime.ofInstant(date.toInstant(), zoneId ?: ZoneId.systemDefault())
+
 }
 
 private fun localDateTimeToDate(localDateTime: LocalDateTime, zoneId: ZoneId?): Date? {
+
     return Date.from(localDateTime.atZone(zoneId ?: ZoneId.systemDefault()).toInstant())
+
 }
