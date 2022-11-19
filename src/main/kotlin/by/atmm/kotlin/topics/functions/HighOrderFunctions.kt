@@ -34,6 +34,7 @@ fun main() {
     val numbers = (0..100).toList()
     val doubledNumbers = numbers.map { it * 2 }
     showList(doubledNumbers)
+
     val employees = numbers.map { "Employee № $it " }
     showList(employees)
     showList(names.sortedDescending())

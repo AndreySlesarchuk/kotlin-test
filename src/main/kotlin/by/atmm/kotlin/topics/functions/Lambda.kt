@@ -43,6 +43,7 @@ fun main() {
     val wordMap = mutableMapOf<String, Int>()
     wordGroups.map { w -> wordMap.put(w.key, w.value.size) }
     println("wordGroups is: $wordGroups") // {1=[a, b], 6=[kotlin], 2=[ba, ad], 3=[ccc]}
+
     val frequentlyWordCount = wordGroups.maxOf { it.value.size }
     println("Max word common count: $frequentlyWordCount")
     println("And this first word is: ${wordMap.maxByOrNull { it.value }?.key}")

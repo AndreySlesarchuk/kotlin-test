@@ -18,11 +18,14 @@ fun main() {
 }
 
 fun test01() = runBlocking { // this: CoroutineScope
+
     launch { // launch a new coroutine and continue
         delay(2000L) // non-blocking delay for 1 second (default time unit is ms)
         println("World 1 !") // print after delay
     }
+
     println("Hello 1, ") // main coroutine continues while a previous one is delayed
+
 }
 
 fun test02() = runBlocking { // this: CoroutineScope
