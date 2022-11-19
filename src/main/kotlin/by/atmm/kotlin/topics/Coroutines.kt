@@ -29,9 +29,11 @@ fun test01() = runBlocking { // this: CoroutineScope
 }
 
 fun test02() = runBlocking { // this: CoroutineScope
+
     thread { // launch a new coroutine and continue
         sleep(1000L) // non-blocking delay for 1 second (default time unit is ms)
         println("World 2 !!!") // print after delay
     }
     println("Hello 2 ") // main coroutine continues while a previous one is delayed
+
 }
