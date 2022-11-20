@@ -10,11 +10,13 @@ import kotlin.concurrent.thread
  */
 
 fun main() {
+
     println("Main flow is proceeding 1")
     test02()
     test01()
     test02()
     println("Main flow is proceeding 2")
+
 }
 
 fun test01() = runBlocking { // this: CoroutineScope
