@@ -78,10 +78,12 @@ fun main() {
 fun LocalDateTime.toMillis(zone: ZoneId = ZoneId.systemDefault()) = atZone(zone)?.toInstant()?.toEpochMilli()
 
 fun iterateBetweenDates(start: LocalDate, end: LocalDate?) {
+
     var date = start
     while (date.isBefore(end)) {
         println(date)
         date = date.plusDays(1)
     }
+
 }
 
