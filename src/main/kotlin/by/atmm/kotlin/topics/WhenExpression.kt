@@ -6,6 +6,7 @@ package topics
  */
 
 fun main() {
+
     testWhen(1)
     testWhen("Hello")
     testWhen(10)
@@ -47,6 +48,7 @@ fun testWhen(input: Any) {
         }
     }
     println("Season: $season")
+
 }
 
 
