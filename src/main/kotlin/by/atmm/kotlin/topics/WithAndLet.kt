@@ -8,6 +8,7 @@ package by.atmm.kotlin.topics
 var name: String? = null
 
 fun main() {
+
     name = "Andrey"
     // if name is null then "let" will not run
     name?.let {
@@ -37,8 +38,11 @@ fun main() {
             println(v)
         }
     })
+
 }
 
 inline fun <T, R> myWith(obj: T, operation: T.() -> R): R {
+
     return obj.operation()
+
 }
