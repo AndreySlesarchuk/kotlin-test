@@ -6,6 +6,7 @@ package topics
  */
 
 fun main() {
+
     val test1 = "Hello"
     //test1 = "Good Bye" - won't work
     println("Value of test1 $test1")
