@@ -60,7 +60,7 @@ fun main() {
     println("base array = $numbers result3 = $result3  result4 = $result4")
 
     val numbers2 = listOf(1, 2, 3, 4, 5)
-    val resultRunningFold = numbers2.runningFold(0) { total, it -> total +it} // 0, 1, 3, 6, 10, 15
+    val resultRunningFold = numbers2.runningFold(0) { total, it -> total + it } // 0, 1, 3, 6, 10, 15
     val resultRunningReduce = numbers2.runningReduce { total, it -> total + it } // 1, 3, 6, 10, 15
     println("base array = $numbers2 resultRunningFold = $resultRunningFold  resultRunningReduce = $resultRunningReduce")
 }

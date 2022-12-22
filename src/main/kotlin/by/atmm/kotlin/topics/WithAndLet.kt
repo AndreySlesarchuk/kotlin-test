@@ -31,18 +31,15 @@ fun main() {
     obj.put("1", "One")
     obj.put("2", "Two")
     obj.put("3", "Three")
-    myWith(obj, {
+    myWith(obj) {
         keys
         values.stream()
         for (v in values) {
             println(v)
         }
-    })
-
+    }
 }
 
 inline fun <T, R> myWith(obj: T, operation: T.() -> R): R {
-
     return obj.operation()
-
 }
