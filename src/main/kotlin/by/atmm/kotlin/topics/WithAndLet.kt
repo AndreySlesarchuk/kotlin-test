@@ -14,6 +14,8 @@ fun main() {
     name?.let {
         if (it.length > 5) {
             println("The length of name greater than 5")
+        } else {
+            println("The length of name less than 5 or equal")
         }
     }
 
