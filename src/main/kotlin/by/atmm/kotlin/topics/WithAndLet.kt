@@ -30,9 +30,10 @@ fun main() {
     println("${list.sum()} ${list.average()} ${list.min()} ${list.max()} ${list.first()} ${list.last()}")
 
     val obj = mutableMapOf<String, String>()
-    obj.put("1", "One")
-    obj.put("2", "Two")
-    obj.put("3", "Three")
+    obj["1"] = "One"
+    obj["2"] = "Two"
+    obj["3"] = "Three"
+
     myWith(obj) {
         keys
         values.stream()
