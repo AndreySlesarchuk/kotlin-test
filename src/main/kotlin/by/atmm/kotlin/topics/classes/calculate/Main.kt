@@ -14,6 +14,6 @@ fun main() {
     println(MyRandom.getRandomString(16))
 
     println(Calc.square(2))
-    println(Calc.lenghtOfCircle(3f))
+    println(Calc.lengthOfCircle(3f))
 
 }
