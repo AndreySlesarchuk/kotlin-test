@@ -6,6 +6,7 @@ package by.atmm.kotlin.topics.classes.waterboy
  */
 
 fun main() {
+
     val sportsman = Sportsman()
     sportsman.invokeWaterBoy(object : WaterBoy {
         override fun bringWater() {
@@ -14,4 +15,5 @@ fun main() {
     })
 
     sportsman.invokeWaterBoy { println("Water2 brought!") }
+
 }

@@ -6,5 +6,7 @@ package by.atmm.kotlin.topics.classes.waterboy
  */
 
 interface WaterBoy {
+
     fun bringWater()
+
 }

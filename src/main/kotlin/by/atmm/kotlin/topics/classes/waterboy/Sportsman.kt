@@ -6,6 +6,7 @@ package by.atmm.kotlin.topics.classes.waterboy
  */
 
 class Sportsman {
+
     fun invokeWaterBoy(waterBoy: WaterBoy) {
         waterBoy.bringWater()
     }
