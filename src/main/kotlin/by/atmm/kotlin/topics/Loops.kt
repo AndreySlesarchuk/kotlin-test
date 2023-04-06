@@ -23,8 +23,8 @@ fun main() {
     println()
     println("-----------------------------------------------------------------")
 
-    val items = listOf("apple", "banana", "orange") // List.of() Java 9
-    val items2 = mutableListOf("carrot", "potato", "onion") // ArrayList
+    val items = listOf("apple", "banana", "orange")
+    val items2 = mutableListOf("carrot", "potato", "onion")
     items2.add("cucumber")
 
     // for
@@ -34,7 +34,7 @@ fun main() {
     // while
     var index = 0
     while (index < items2.size)
-        println("Item at $index is ${items2[index++]}") // println(items2[index++])
+        println("Item at $index is ${items2[index++]}")
 
     // Ranges
     println("Is orange in items: ${"orange" in items}")
