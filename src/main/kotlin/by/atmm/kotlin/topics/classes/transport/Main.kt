@@ -6,6 +6,7 @@ package by.atmm.kotlin.topics.classes.transport
  */
 
 fun main() {
+
     travel(object : Transport("Bus") {
         override fun drive() {
             println("Bus is driving...")
@@ -24,6 +25,7 @@ fun main() {
         car.name = "Car2"
     }
     bike.drive()
+
 }
 
 fun travel(transport: Transport) {

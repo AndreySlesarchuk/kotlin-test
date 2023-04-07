@@ -13,6 +13,6 @@ package by.atmm.kotlin.topics.classes.student
  *
  */
 
-data class Student (val name: String, val lastName: String, val id: String)
+data class Student(val name: String, val lastName: String, val id: String)
 
 

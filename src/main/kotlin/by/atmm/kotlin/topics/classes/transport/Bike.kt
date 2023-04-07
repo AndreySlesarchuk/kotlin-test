@@ -6,7 +6,9 @@ package by.atmm.kotlin.topics.classes.transport
  */
 
 class Bike : Transport("Bike") {
+
     override fun drive() {
         println("A bike is driving")
     }
+
 }

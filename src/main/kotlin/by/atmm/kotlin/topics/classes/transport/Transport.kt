@@ -6,5 +6,7 @@ package by.atmm.kotlin.topics.classes.transport
  */
 
 abstract class Transport(open val name: String) {
+
     abstract fun drive()
+
 }
