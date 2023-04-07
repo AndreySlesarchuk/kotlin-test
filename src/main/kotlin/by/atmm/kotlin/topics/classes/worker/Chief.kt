@@ -6,8 +6,10 @@ package by.atmm.kotlin.topics.classes.worker
  */
 
 class Chief(name: String, age: Int)
+
     : WorkerAbstract(name, age) {
     override fun work() {
         println("Process control")
     }
+
 }
