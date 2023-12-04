@@ -103,6 +103,29 @@
             <artifactId>spring-web</artifactId>
             <version>5.3.15</version>
         </dependency>
+
+        <!-- https://mvnrepository.com/artifact/io.github.kotlin-telegram-bot.kotlin-telegram-bot/telegram -->
+        <dependency>
+            <groupId>io.github.kotlin-telegram-bot.kotlin-telegram-bot</groupId>
+            <artifactId>telegram</artifactId>
+            <version>4.5.0</version>
+        </dependency>
+
+        <!-- https://mvnrepository.com/artifact/com.aallam.openai/openai-client-bom -->
+        <dependency>
+            <groupId>com.aallam.openai</groupId>
+            <artifactId>openai-client-bom</artifactId>
+            <version>3.4.0</version>
+            <type>pom</type>
+        </dependency>
+        <!-- https://mvnrepository.com/artifact/io.ktor/ktor-client-okhttp -->
+        <dependency>
+            <groupId>io.ktor</groupId>
+            <artifactId>ktor-client-okhttp</artifactId>
+            <version>2.3.3</version>
+            <scope>runtime</scope>
+        </dependency>
+
     </dependencies>
 
     <build>
