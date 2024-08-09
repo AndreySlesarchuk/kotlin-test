@@ -34,7 +34,7 @@
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-parent</artifactId>
-            <version>2.7.3</version>
+            <version>3.2.4</version>
             <type>pom</type>
         </dependency>
 
@@ -46,12 +46,12 @@
         <dependency>
             <groupId>com.fasterxml.jackson.core</groupId>
             <artifactId>jackson-databind</artifactId>
-            <version>2.13.3</version>
+            <version>2.13.4.1</version>
         </dependency>
         <dependency>
             <groupId>org.jetbrains.kotlinx</groupId>
             <artifactId>kotlinx-coroutines-core-jvm</artifactId>
-            <version>1.6.3</version>
+            <version>1.9.0-RC</version>
         </dependency>
         <dependency>
             <groupId>org.jetbrains.kotlin</groupId>
@@ -79,24 +79,29 @@
             <artifactId>javaee-web-api</artifactId>
             <version>7.0</version>
         </dependency>
+
+        <!-- https://mvnrepository.com/artifact/org.springframework.boot/spring-boot-starter-web -->
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-web</artifactId>
+            <version>3.2.5</version>
         </dependency>
+
 
         <dependency>
             <groupId>com.h2database</groupId>
             <artifactId>h2</artifactId>
+            <version>2.2.224</version>
             <scope>runtime</scope>
         </dependency>
-        <dependency>
-            <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter-data-jpa</artifactId>
-        </dependency>
+<!--        <dependency>-->
+<!--            <groupId>org.springframework.boot</groupId>-->
+<!--            <artifactId>spring-boot-starter-data-jpa</artifactId>-->
+<!--        </dependency>-->
         <dependency>
             <groupId>org.springframework.data</groupId>
             <artifactId>spring-data-commons</artifactId>
-            <version>2.6.1</version>
+            <version>3.2.5</version>
         </dependency>
         <dependency>
             <groupId>org.springframework</groupId>
@@ -104,12 +109,12 @@
             <version>5.3.15</version>
         </dependency>
 
-        <!-- https://mvnrepository.com/artifact/io.github.kotlin-telegram-bot.kotlin-telegram-bot/telegram -->
-        <dependency>
-            <groupId>io.github.kotlin-telegram-bot.kotlin-telegram-bot</groupId>
-            <artifactId>telegram</artifactId>
-            <version>4.5.0</version>
-        </dependency>
+<!--        &lt;!&ndash; https://mvnrepository.com/artifact/io.github.kotlin-telegram-bot.kotlin-telegram-bot/telegram &ndash;&gt;-->
+<!--        <dependency>-->
+<!--            <groupId>io.github.kotlin-telegram-bot.kotlin-telegram-bot</groupId>-->
+<!--            <artifactId>telegram</artifactId>-->
+<!--            <version>4.5.0</version>-->
+<!--        </dependency>-->
 
         <!-- https://mvnrepository.com/artifact/com.aallam.openai/openai-client-bom -->
         <dependency>
@@ -124,6 +129,11 @@
             <artifactId>ktor-client-okhttp</artifactId>
             <version>2.3.3</version>
             <scope>runtime</scope>
+        </dependency>
+        <dependency>
+            <groupId>com.itextpdf</groupId>
+            <artifactId>itextpdf</artifactId>
+            <version>5.5.13.3</version>
         </dependency>
 
     </dependencies>
@@ -170,4 +180,11 @@
             </plugin>
         </plugins>
     </build>
+    <repositories>
+        <repository>
+            <id>maven_central</id>
+            <name>Maven Central</name>
+            <url>https://repo.maven.apache.org/maven2/</url>
+        </repository>
+    </repositories>
 </project>

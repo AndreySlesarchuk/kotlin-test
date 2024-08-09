@@ -36,22 +36,22 @@ fun printInfo(data: Map<String, List<Int>>) {
     val listOfSum = validData.map {
         it.value.sum()
     }
-    val max = listOfSum.max()
-    val min = listOfSum.min()
+//    val max = listOfSum.max()
+//    val min = listOfSum.min()
     val averageMonth = listOfSum.average()
 
-    val maxMonth = validData
-        .filter { it.value.sum() == max }.keys
-    val minMonth = validData
-        .filter { it.value.sum() == min }.keys
+//    val maxMonth = validData
+//        .filter { it.value.sum() == max }.keys
+//    val minMonth = validData
+//        .filter { it.value.sum() == min }.keys
 
     println("Average revenue per month: $averageMonth")
-    println("Maximum revenue per month: $max")
+//    println("Maximum revenue per month: $max")
     print(" was in the following months: ")
-    maxMonth.forEach { print(" $it") }
+//    maxMonth.forEach { print(" $it") }
     println()
-    println("Minimum revenue per month: $min")
+//    println("Minimum revenue per month: $min")
     print(" was in the following months: ")
-    minMonth.forEach { print(" $it") }
+//    minMonth.forEach { print(" $it") }
     println()
 }

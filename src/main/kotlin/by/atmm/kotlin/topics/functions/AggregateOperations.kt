@@ -13,15 +13,15 @@ fun main() {
     val average = numbers.average() // 6.75
     val sumBy = numbers.sumOf { it * 5 } // 135
     val sumByDouble = numbers.sumOf { it.toDouble() / 8 } // 3.375
-    val min1 = numbers.min() // 1
-    val max1 = numbers.max() // 15 Both functions return null if there are no elements in the collection.
-    val min2 = numbers.minOrNull() // 1
-    val max2 = numbers.maxOrNull() // 15
-    val maxBy = numbers.maxBy { it % 5 } // 3
-    val minBy = numbers.minBy { it % 5 } // 15
+//    val min1 = numbers.min() // 1
+//    val max1 = numbers.max() // 15 Both functions return null if there are no elements in the collection.
+//    val min2 = numbers.minOrNull() // 1
+//    val max2 = numbers.maxOrNull() // 15
+//    val maxBy = numbers.maxBy { it % 5 } // 3
+//    val minBy = numbers.minBy { it % 5 } // 15
 
     println("base array = $numbers  count:$count  sum:$sum  average:$average  sumBy:$sumBy  sumByDouble:$sumByDouble")
-    println("base array = $numbers  min1:$min1  max1:$max1  min2:$min2  max2:$max2  maxBy:$maxBy  minBy:$minBy")
+//    println("base array = $numbers  min1:$min1  max1:$max1  min2:$min2  max2:$max2  maxBy:$maxBy  minBy:$minBy")
 
     val employees = listOf(Employee("A", 3500, 23), Employee("B", 2000, 30))
     println("Employees salary: ${employees.sumOf { it.salary }}")
@@ -30,9 +30,9 @@ fun main() {
     println("Employees average age: $empAverageAge and $empAverageAge2")
 
     val strings = listOf("Berlin", "Kolkata", "Prague", "Barcelona")
-    val maxWith = strings.maxWith(compareBy { it.length % 4 })
-    val minWith = strings.minWith(compareBy { it.length % 4 })
-    println("maxWith() = $maxWith     minWith() = $minWith")
+//    val maxWith = strings.maxWith(compareBy { it.length % 4 })
+//    val minWith = strings.minWith(compareBy { it.length % 4 })
+//    println("maxWith() = $maxWith     minWith() = $minWith")
 
     val resultFold = numbers.fold(100) { total, it -> total - it } // 73
     val resultFoldRight = numbers.foldRight(0) { it, total -> total - it } // -27

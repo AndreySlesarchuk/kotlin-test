@@ -1,5 +1,7 @@
 package by.atmm.kotlin.topics
 
+import kotlin.math.min
+
 /**
  *  @author Andrey Slesarchuk
  *  @date 2022-08-27
@@ -24,10 +26,10 @@ fun main() {
         for (i in 0 until 1000) {
             add((Math.random() * 100).toInt())
         }
-        println("Sum: ${sum()} Average: ${average()} Min: ${min()} Max: ${max()} First: ${first()} Last: ${last()}  ")
+//        println("Sum: ${sum()} Average: ${average()} Min: ${min()} Max: ${max()} First: ${first()} Last: ${last()}  ")
     }
 
-    println("${list.sum()} ${list.average()} ${list.min()} ${list.max()} ${list.first()} ${list.last()}")
+//    println("${list.sum()} ${list.average()} ${list.min()} ${list.max()} ${list.first()} ${list.last()}")
 
     val obj = mutableMapOf<String, String>()
     obj["1"] = "One"

@@ -19,8 +19,8 @@ fun main() {
 
         println(sum())
         println(average())
-        println(min())
-        println(max())
+//        println(min())
+//        println(max())
         println(first())
         println(last())
     }
@@ -31,8 +31,8 @@ fun main() {
 
     println(list.sum())
     println(list.average())
-    println(list.min())
-    println(list.max())
+//    println(list.min())
+//    println(list.max())
     println(list.first())
     println(list.last())
 }
