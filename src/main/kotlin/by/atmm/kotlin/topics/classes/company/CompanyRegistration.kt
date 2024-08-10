@@ -6,5 +6,5 @@ data class CompanyRegistration (
     val phoneNumber: String,
     val smsMain: String,
     val smsTime : LocalDateTime,
-    val numberOfAttempts : Int,
+    var numberOfAttempts : Int,
 )

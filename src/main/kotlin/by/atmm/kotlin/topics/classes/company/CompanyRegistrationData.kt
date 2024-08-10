@@ -14,4 +14,8 @@ object CompanyRegistrationData {
         return data.find { it.phoneNumber == phoneNumber}
     }
 
+    fun deleteData(phoneNumber: String) {
+        data.removeIf { it.phoneNumber == phoneNumber }
+    }
+
 }
