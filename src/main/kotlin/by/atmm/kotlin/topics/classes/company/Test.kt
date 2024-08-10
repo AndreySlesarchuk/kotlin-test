@@ -2,12 +2,12 @@ package by.atmm.kotlin.topics.classes.company
 
 fun main() {
     val phoneNumber = "+375123456789"
-
     val testCreate = CompanyRegistrationRo(phoneNumber, "", true, "")
     val testWrongSms = CompanyRegistrationRo(phoneNumber, "1111", false, "")
     val testValidSms = CompanyRegistrationRo(phoneNumber, "0000", false, "")
     val testEmpty = CompanyRegistrationRo("", "", true, "")
     val companyRegistrationService: CompanyRegistrationService = CompanyRegistrationService()
+    println("CompanyRegistrationData version: ${CompanyRegistrationData.version}")
     // create data
     companyRegistrationService.companyRegister(testCreate)
     // check with wrong sms

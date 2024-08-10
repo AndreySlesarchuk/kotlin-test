@@ -1,9 +1,11 @@
 package by.atmm.kotlin.topics.classes.company
 
+import java.time.LocalDateTime
+
 object CompanyRegistrationData {
 
     val name = "companyRegistrationData.db"
-    val version = 1
+    val version = LocalDateTime.now()
     val data = mutableListOf<CompanyRegistration>()
 
     fun insertData(item: CompanyRegistration) {
