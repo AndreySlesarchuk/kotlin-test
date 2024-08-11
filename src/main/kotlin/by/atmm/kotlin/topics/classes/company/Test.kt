@@ -7,6 +7,7 @@ fun main() {
     val testValidSms = CompanyRegistrationRo(phoneNumber, "0000", false, "")
     val testEmpty = CompanyRegistrationRo("", "", true, "")
     val companyRegistrationService: CompanyRegistrationService = CompanyRegistrationService()
+    println("CompanyRegistrationData: ${CompanyRegistrationData.DB_NAME}")
     println("CompanyRegistrationData version: ${CompanyRegistrationData.version}")
     // create data
     companyRegistrationService.companyRegister(testCreate)

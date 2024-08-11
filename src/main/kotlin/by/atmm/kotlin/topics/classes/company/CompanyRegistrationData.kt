@@ -4,8 +4,8 @@ import java.time.LocalDateTime
 
 object CompanyRegistrationData {
 
-    val name = "companyRegistrationData.db"
-    val version = LocalDateTime.now()
+    const val DB_NAME = "companyRegistrationData.db"
+    val version: LocalDateTime = LocalDateTime.now()
     val data = mutableListOf<CompanyRegistration>()
 
     fun insertData(item: CompanyRegistration) {
