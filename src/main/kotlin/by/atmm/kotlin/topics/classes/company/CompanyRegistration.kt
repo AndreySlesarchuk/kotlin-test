@@ -5,6 +5,7 @@ import java.time.LocalDateTime
 data class CompanyRegistration (
     val phoneNumber: String,
     val smsMain: String,
-    val smsTime : LocalDateTime,
+    val token: String,
+    val eventTime : LocalDateTime,
     var numberOfAttempts : Int,
 )

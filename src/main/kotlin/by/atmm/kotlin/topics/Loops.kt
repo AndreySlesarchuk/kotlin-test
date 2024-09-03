@@ -2,18 +2,23 @@ package topics
 
 /**
  *  @author Andrey Slesarchuk
- *  @date 2022-05-03
+ *  @date 2024-09-03
  */
 
 fun main() {
-
     val array = arrayOfNulls<Int?>(101)
+
     for (i in 0 until array.size) array[i] = i
     for ((index, i) in array.withIndex()) {
         array[index] = i?.times(2)
     }
-    for (i in array) print(i)
+
+    var count = 0
+    println("repeat")
+    repeat(array.size) { print(array[count++]) }
     println()
+    for (i in array) print(i)
+    println("for")
     println("-----------------------------------------------------------------")
     val arr = arrayOfNulls<Int?>(301)
     for ((index, i) in (300..600).withIndex()) {
