@@ -16,5 +16,4 @@ class Player(name: String): DiceRoller {
         return Random.nextInt(0,6)
     }
 
-    // class members and functions
 }
