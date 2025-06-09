@@ -4,7 +4,6 @@ import java.util.*
 import kotlin.random.Random
 
 class Player(name: String): DiceRoller {
-
     val name = name
         get() = field.uppercase(Locale.getDefault())
     var score: Int = 0
@@ -13,8 +12,8 @@ class Player(name: String): DiceRoller {
             field = if (value >= 0) value else 0
         }
 
-
     override fun rollDice(): Int {
         return Random.nextInt(0,6)
     }
+
 }

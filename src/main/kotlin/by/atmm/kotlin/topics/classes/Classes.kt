@@ -6,7 +6,7 @@ package topics
  */
 
 // Primary Constructor
-class Person(val firstName: String, val lastName: String, var age: Int) {
+class Person(var firstName: String, val lastName: String, var age: Int) {
     var children: MutableList<Person> = mutableListOf() // ArrayList
 
     init {
@@ -22,6 +22,11 @@ class Person(val firstName: String, val lastName: String, var age: Int) {
     // Constructor without arguments
     constructor() :
             this("", "", 0)
+
+    override fun toString(): String {
+        return "Person(firstName='$firstName', lastName='$lastName', age=$age, children=$children)"
+    }
+
 }
 
 // data - automatic equals, hashcode...
