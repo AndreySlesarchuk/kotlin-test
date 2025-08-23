@@ -1,11 +1,11 @@
-package by.atmm.kotlin.topics
+package by.atmm.kotlin.topics.coroutines
 
 import kotlinx.coroutines.*
 import java.lang.Thread.sleep
 import kotlin.concurrent.thread
 
 /**
- *  @author Andrey Slesarchuk
+ *  @author Andrei Slesarchuk
  *  @date 2022-07-09
  */
 
