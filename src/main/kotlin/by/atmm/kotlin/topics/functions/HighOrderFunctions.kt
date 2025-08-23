@@ -1,7 +1,7 @@
 package by.atmm.kotlin.topics.functions
 
 /**
- *  @author Andrey Slesarchuk
+ *  @author Andrei Slesarchuk
  *  @date 2022-08-29
  */
 
